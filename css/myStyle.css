@@ -14,7 +14,6 @@ html,body
 }
 
 .body {
-	margin-top: 60px;
 	margin-bottom: 50px;
 }
 
@@ -29,7 +28,7 @@ form {
 	float: left;
 	padding: 1% 1% 1% 4%;
 	text-align: center;
-    background: #18bc9c;
+    background: #4CAF50;
     color: #fff;
 }
 /*--------------------------------------------------
@@ -41,54 +40,49 @@ BANNER
 
 /*--------------------------------------------------
 NAVBAR
----------------------------------------------------*/
-@media (max-width: 480px) {
-	.navbar {
-		font-size: 10px;
-		padding-left: 2px;
-		padding-right: 2px;
-		padding-top: 2px;
-	}
-}
-
-.navbar {
-	position: absolute;
-	background-color: #18bc9c;
+---------------------------------------------------
+/* navbar */
+.navbar-default {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
 	text-transform: uppercase;
-	text-align: center;
-	display: inline-block;
-	height: 50px;
-	width: 100%;
+	border-radius: 0;
 }
 
-.navbar ul li {
-	display: inline-block;
-	position: relative;
-	
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
 }
 
-.navbar ul li a {
-	color: #2c3e50;
-	font-weight: bold;
-	text-decoration: none;
-	background-color: transparent;
-	padding: 15px;
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
 }
-
-.navbar ul li a:hover{
-	background-color: white;
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
 }
-
-.icon-bar {
-	color: white;
-	background-color: white;
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
 }
-
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: white;
+    }
+}
 /*--------------------------------------------------
 FOOTER
 ---------------------------------------------------*/
 .footer {
-	background-color: #18bc9c;
+	background-color: #4CAF50;
 	text-transform: uppercase;
 	text-align: center;
 	display: inline-block;
@@ -100,3 +94,7 @@ FOOTER
 	padding-bottom: 10px;
 	height: auto;
 }
+
+/*--------------------------------------------------
+BLOCK
+---------------------------------------------------*/
