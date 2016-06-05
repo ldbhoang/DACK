@@ -1,0 +1,29 @@
+body html {
+	margin: 0 : auto;
+}
+
+
+/*-----------------------------------------------------
+TUTORIAL ITEM
+-----------------------------------------------------*/
+.tutorial {
+	max-width: 100%;
+	height: auto;	
+	text-align: center;
+	padding: 10px;
+}
+
+.tutorial p{
+	font-size: 3vw;
+
+}
+
+.tutorial a {
+	text-decoration: none;
+}
+
+.tutorial .img-responsive {
+	margin: 0 auto;
+	padding: 2%;
+}
+

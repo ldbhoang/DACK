@@ -6,31 +6,59 @@ STYLE
 /*--------------------------------------------------
 COMMON
 ---------------------------------------------------*/
+html,body
+{
+	width: 100%;
+	margin: 0;
+    overflow-x: hidden; 
+}
+
 .body {
-	margin-top: 50px;
+	margin-top: 60px;
 	margin-bottom: 50px;
 }
 
 form {
   display: none;
 }
+
+.label p{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-transform: uppercase;
+	font-size: 2vw;
+	float: left;
+	padding: 1% 1% 1% 4%;
+	text-align: center;
+    background: #18bc9c;
+    color: #fff;
+}
+/*--------------------------------------------------
+BANNER
+---------------------------------------------------*/
+.banner {
+	width: 100%;
+}
+
 /*--------------------------------------------------
 NAVBAR
 ---------------------------------------------------*/
 @media (max-width: 480px) {
 	.navbar {
-		font-size: 8px;
+		font-size: 10px;
 		padding-left: 2px;
 		padding-right: 2px;
+		padding-top: 2px;
 	}
 }
 
 .navbar {
-	background-color: #2c3e50;
+	position: absolute;
+	background-color: #18bc9c;
 	text-transform: uppercase;
 	text-align: center;
 	display: inline-block;
 	height: 50px;
+	width: 100%;
 }
 
 .navbar ul li {
@@ -40,7 +68,7 @@ NAVBAR
 }
 
 .navbar ul li a {
-	color: white;
+	color: #2c3e50;
 	font-weight: bold;
 	text-decoration: none;
 	background-color: transparent;
@@ -48,12 +76,7 @@ NAVBAR
 }
 
 .navbar ul li a:hover{
-	color: #18bc9c;
-	background-color: transparent;
-}
-
-.navbar .nav ul li a:active {
-	color: black;
+	background-color: white;
 }
 
 .icon-bar {
@@ -65,7 +88,7 @@ NAVBAR
 FOOTER
 ---------------------------------------------------*/
 .footer {
-	background-color: #2c3e50;
+	background-color: #18bc9c;
 	text-transform: uppercase;
 	text-align: center;
 	display: inline-block;
@@ -74,6 +97,6 @@ FOOTER
 	color: white;
 	font-weight: bold;
 	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	height: auto;
 }
