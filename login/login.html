@@ -11,7 +11,48 @@
   </head>
   
   <body ng-controller="loginCtrl">
-
+	<div class="container">
+		<p style="color:red" ng-show="loggedOut">You are logged out!!!</p>
+		<div class="row">
+			<div class="col-sm-5" style="margin-left: 3%; margin-right: 3%">
+				<div class="label row"><p>Register</p></div>
+				<form class="form-signin" name="regForm">
+					<div class="form-group" ng-class="{ 'has-error' : regForm.email.$invalid }">
+						<label>Email</label>
+						<input type="email" name="regemail" class="form-control" ng-model="user.regemail">
+						<p class="help-block" ng-show="regForm.regemail.$invalid">Enter a valid email.</p>
+					</div> 
+					<div class="form-group" ng-class="{ 'has-error' : regForm.password.$invalid }">
+						<label>Password</label>
+					   
+						<input type="password" name="regpassword" class="form-control" ng-model="user.regpassword" ng-minlength="8">
+						<p class="help-block" ng-show="regForm.regpassword.$error.minlength">Min password length is 8 characters.</p>
+						<p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>
+					</div> 
+					<br/>
+					<button type="button" ng-click="signUp();" ng-disabled="!user.regemail || !user.regpassword" class="btn btn-lg btn-success btn-block">Register</button>
+				</form>					
+			</div>
+			
+			<div class="col-sm-5" style="margin-left: 3%; margin-right: 3%">
+				<div class="label row"><p>Login</p></div>
+				<form class="form-signin" name="signinForm" role="form">
+					<div class="form-group" ng-class="{ 'has-error' : signinForm.email.$invalid }">
+						<label>Email</label>
+						<input type="email" name="logemail" class="form-control" ng-model="user.logemail">
+						<p class="help-block" ng-show="signinForm.logemail.$invalid">Enter a valid email.</p>
+					</div> 
+				<div class="form-group" ng-class="{ 'has-error' : signinForm.logpassword.$invalid }">
+					<label>Password</label>
+						<input type="password" name="logpassword" class="form-control" ng-model="user.logpassword" ng-minlength="3">
+						<p class="help-block" ng-show="signinForm.logpassword.$error.minlength">Min password length is 8 characters.</p>
+					</div>
+					<br/>
+					<button ng-disabled="!user.logemail || !user.logpassword" type="button" ng-click="SignIn($event)" class="btn btn-lg btn-success btn-block">SignIn</button>
+				</form>					
+			</div>
+		</div>
+	<div>
   </body>
   
 </html>

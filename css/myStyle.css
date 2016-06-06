@@ -17,10 +17,6 @@ html,body
 	margin-bottom: 50px;
 }
 
-form {
-  display: none;
-}
-
 .label p{
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	text-transform: uppercase;

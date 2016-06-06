@@ -28,7 +28,7 @@
 	<div>
 		<img class="banner" src="images/banner.jpg"/>
 	</div>
-	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+	<nav class="navbar navbar-default navbar-inverse" role="navigation" ng-controller="mainCtrl">
 		<div class="navbar-header container-fluid">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
 				<span class="icon-bar"></span>
@@ -43,7 +43,7 @@
 				<li><a href="#/cssTuts">CSS</a></li>
 				<li><a href="#/jsTuts">Javascript</a></li>
 				<li><a href="#/discuss">Discuss</a></li>
-				<li><a href="#/login">Login</a></li>
+				<li><a href="#/login">{{label}}</a></li>
 			</ul>
 		</div>
 	</nav>
