@@ -1,6 +1,6 @@
 'use strict'
 
-var loginApp = angular.module('mainApp.login', ['ngRoute','firebase']);
+var loginApp = angular.module('mainApp.login', ['ngRoute','firebase','ngCookies']);
 
 //Route
 loginApp.config(['$routeProvider', function($routeProvider){
@@ -75,14 +75,16 @@ loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebase
 	};
 }]);
 
-loginApp.service('UserService', function() {
+loginApp.service('UserService', [ '$cookies', function($cookies) {
     var user = '';
     return {
         getUser: function() {
-            return user;
+            user = $cookies.get("user");
+			return user;
         },
         setUser: function(value) {
             user = value;
+			$cookies.put("user", user);
         }
     };
-});
+}]);

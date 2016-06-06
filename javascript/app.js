@@ -3,7 +3,9 @@
 var myApp = angular.module('mainApp', [
 	'ngRoute',
 	'mainApp.home',
-	'mainApp.login'
+	'mainApp.login',
+	'mainApp.html',
+	'mainApp.addPost'
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider){

@@ -27,6 +27,24 @@ html,body
     background: #4CAF50;
     color: #fff;
 }
+
+@media (max-width: 767px) {
+	.label p {
+		font-size: 3vw !important;
+	}
+	
+	.scrollable-menu {
+		font-size: 2.5vw !important;
+	}
+	
+	.leftTutButton, .rightTutButton {
+		font-size: 2vw !important;
+	}
+	
+	.dropdown-toggle {
+		font-size: 2.5vw !important;
+	}
+}
 /*--------------------------------------------------
 BANNER
 ---------------------------------------------------*/
@@ -39,6 +57,7 @@ NAVBAR
 ---------------------------------------------------
 /* navbar */
 .navbar-default {
+	font-family: "Comic Sans MS", cursive, sans-serif;
     background-color: #4CAF50;
     border-color: #4CAF50;
 	text-transform: uppercase;
@@ -89,6 +108,8 @@ FOOTER
 	padding-top: 15px;
 	padding-bottom: 10px;
 	height: auto;
+	position: fixed;
+	bottom: 0;
 }
 
 /*--------------------------------------------------
@@ -114,4 +135,70 @@ BLOCK
 	width: 60%;
 	display: inline-block;
 	text-align: center;
+}
+
+/*---------------------------------------------------
+DROPDOWN MENU
+----------------------------------------------------*/
+.scrollable-menu {
+    height: auto;
+  	max-height: 200px;
+    overflow-x: hidden;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+	font-size: 1vw;
+}
+
+.dropdown-toggle{
+	background-color: #4CAF50;
+	color: #fff;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+.dropdown-toggle:active {
+	background-color: #4CAF50;
+}
+
+/*----------------------------------------------------
+NEXT - PREVIOUS BUTTON
+-----------------------------------------------------*/
+.leftTutButton {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-transform: uppercase;
+	font-size: 1vw;
+	padding: 1% 1% 1% 1%;
+	margin: 1.5% 0 1.5% 0;
+	text-align: center;
+    background: #4CAF50;
+    color: #fff;
+	float: left;
+	text-decoration: none !important;
+}
+
+.rightTutButton {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-transform: uppercase;
+	font-size: 1vw;
+	padding: 1% 1% 1% 1%;
+	margin: 1.5% 0 1.5% 0;
+	text-align: center;
+    background: #4CAF50;
+    color: #fff;
+	float: right;
+	text-decoration: none !important;
+}
+
+/*------------------------------------------------------
+TUT CONTENT
+-------------------------------------------------------*/
+.tutContent {
+	width: 90%;
+	margin: 1% 5% 1% 5%;
+	text-align: justify;
+}
+
+.tutContent p {
+	text-align: justify;
 }
