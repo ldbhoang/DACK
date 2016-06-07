@@ -5,8 +5,11 @@ var myApp = angular.module('mainApp', [
 	'mainApp.home',
 	'mainApp.login',
 	'mainApp.html',
+	'mainApp.css',
+	'mainApp.js',
 	'mainApp.addPost',
-	'mainApp.admin'
+	'mainApp.admin',
+	'mainApp.editPost'
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider){

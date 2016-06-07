@@ -33,6 +33,7 @@ addPostApp.controller('addPostCtrl', ['$scope','UserService', '$location', '$fir
 					var title = $scope.article.title;
 					var post = $scope.article.post;
 					var type = $scope.article.type;
+					console.log(type);
 					var id = "";
 					
 					if(type === "HTML Tuts")

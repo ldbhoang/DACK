@@ -29,7 +29,22 @@ adminApp.controller('adminCtrl', ['$scope','UserService', '$location', '$firebas
 			
 			if($scope.flag)
 			{
-				
+				$scope.addAdmin = function() {
+					if(!$scope.addForm.$invalid)
+					{
+						for(i = 0; i < ref.length; i++)
+						{
+							if($scope.email === ref[i].$value)
+							{
+								alert("This user already has admin permission!");
+								return;
+							}
+						}
+						fb.push($scope.email);
+						alert("Added successfully!");
+						$scope.email = "";
+					}
+				}
 			}
 			else
 			{
