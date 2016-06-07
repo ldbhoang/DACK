@@ -10,7 +10,7 @@ addPostApp.config(['$routeProvider', function($routeProvider){
     })
 }]);
 
-addPostApp.controller('addPostCtrl', ['$scope','UserService', '$location', '$firebase', function($scope, UserService, $location, $firebase){
+addPostApp.controller('addPostCtrl', ['$scope','UserService', '$location', '$firebase', '$route', function($scope, UserService, $location, $firebase, $route){
 	$scope.service = UserService;
 	$scope.$watch('service.getUser()', function(newVal) {
 		console.log(newVal);
@@ -19,22 +19,44 @@ addPostApp.controller('addPostCtrl', ['$scope','UserService', '$location', '$fir
 			$scope.AddPost = function(){
 				var title = $scope.article.title;
 				var post = $scope.article.post;
+				var type = $scope.article.type;
+				var id = "";
 				
-				var fb = new Firebase("https://frontend-tuts.firebaseio.com/htmlTuts");
-				//var fb = $firebase(firebaseObj);
-
-				fb.push({ 
-					title: title, 
-					post: post 
-				}, function(error) {
+				if(type === "HTML Tuts")
+				{
+					var fb = new Firebase("https://frontend-tuts.firebaseio.com/htmlTuts");
+				}
+				else if(type === "Javascript Tuts")
+				{
+					var fb = new Firebase("https://frontend-tuts.firebaseio.com/jsTuts");
+				}
+				else if(type === "CSS Tuts")
+				{
+					var fb = new Firebase("https://frontend-tuts.firebaseio.com/cssTuts");
+				}
+				else
+				{
+					window.alert("Please select one category for post!!!");
+					return;
+				}
+				
+				var onComplete = function(error) {
 					if(error){
 						console.log(error);
 					}
 					else{
 						console.log("Push data success");
-						$location.path('/addPost');
+						$route.reload();
 					}
-				});
+				};
+
+				var ref = fb.push();
+				id = ref.key();
+				ref.set({
+					title : title,
+					post : post,
+					id : id
+				}, onComplete);
 			}			
 		}
 		else

@@ -18,20 +18,21 @@
 			<div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tutorials <span class="caret"></span></button>
                 <ul class="dropdown-menu scrollable-menu" role="menu">
-                    <li ng-repeat="tit in tuts"><a href="#">{{tit.title}}</a></li>
+                    <li ng-repeat="tit in tuts"><a href="#/htmlTuts/{{tit.id}}">{{tit.title}}</a></li>
                 </ul>
             </div>
 		</div>
 		
 		<!-- Content -->
 		<div class="row tutContent">
-			{{tuts[0].post}}
+			<h2>You are reading: {{curTut.title}}</h2>
+			{{curTut.post}}
 		</div>
 		
 		<!-- Next, previous chapter -->
 		<div class="row">
-			<a href="#pre" class="leftTutButton">Previous Tut</a>
-			<a href="#next" class="rightTutButton">Next Tut</a>
+			<a href="#/htmlTuts/{{preTut}}" class="leftTutButton">Previous Tut</a>
+			<a href="#/htmlTuts/{{nextTut}}" class="rightTutButton">Next Tut</a>
 		</div>
 	<div>
   </body>

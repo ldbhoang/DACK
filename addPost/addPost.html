@@ -17,27 +17,35 @@
 
 			<!-- Form Name -->
 			<legend>Create Post</legend>
-
+			
+			<!-- Select Type -->
+			<label for="sel1">Select Category:</label>
+			  <select class="form-control" ng-model="article.type" id="sel1" style="width: 83%;">
+				<option>HTML Tuts</option>
+				<option>CSS Tuts</option>
+				<option>Javascript Tuts</option>
+			  </select>
+			<br/>
 			<!-- Text input-->
 			<div class="form-group">
-			  <label class="col-md-4 control-label" for="txtTitle">Title</label>  
-			  <div class="col-md-4">
+			  <label class="col-md-10" for="txtTitle">Title</label>  
+			  <div class="col-md-10">
 			  <input id="txtTitle" name="txtTitle" ng-model="article.title" type="text" class="form-control input-md">
 			  </div>
 			</div>
 
 			<!-- Textarea -->
 			<div class="form-group">
-			  <label class="col-md-4 control-label" for="txtPost">Post</label>
-			  <div class="col-md-4">                     
-				<textarea class="form-control" id="txtPost" ng-model="article.post" name="txtPost" ></textarea>
+			  <label class="col-md-10" for="txtPost">Post</label>
+			  <div class="col-md-10">                     
+				<textarea class="form-control" id="txtPost" rows="10" ng-model="article.post" name="txtPost" ></textarea>
 			  </div>
 			</div>
 
 			<!-- Button -->
 			<div class="form-group">
-			  <label class="col-md-4 control-label" for="singlebutton"></label>
-			  <div class="col-md-4">
+			  <label class="col-md-10" for="singlebutton"></label>
+			  <div class="col-md-10">
 				<input id="singlebutton" ng-disabled="!article.title || !article.post" name="singlebutton" class="btn btn-primary" type="submit" value="Publish" />
 			  </div>
 			</div>
