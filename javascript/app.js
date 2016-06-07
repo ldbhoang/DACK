@@ -6,6 +6,7 @@ var myApp = angular.module('mainApp', [
 	'mainApp.login',
 	'mainApp.html',
 	'mainApp.addPost',
+	'mainApp.discuss',
 	'mainApp.admin'
 ]);
 
