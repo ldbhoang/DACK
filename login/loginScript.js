@@ -39,6 +39,8 @@ loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebase
 			}, function(error) {
 				//Failure callback
 				console.log('Authentication failure');
+				$scope.logError = true;
+				$scope.logErrorMessage = error.message;
 			});
 	};
 	
@@ -63,6 +65,8 @@ loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebase
 						}, function(error) {
 							//Failure callback
 							console.log('Authentication failure');
+							$scope.regError = true;
+							$scope.regErrorMessage = error.message;
 						});
 					}, function(error) {
 						// do things if failure

@@ -15,17 +15,26 @@
 		<h1>Welcome!!!</h1>
 		
 		<!-- Add admin -->
+		<div class="row label">
+				<p>Admin Management</p>
+		</div>
 		<div class="row">
-			<div class="label col-sm-4">
-				<p>Add admin</p>
-			</div>
-			<form class="form-signin col-sm-8" name="addForm">
-				<div class="form-group" ng-class="{ 'has-error' : addForm.email.$invalid }">
-					<label>Email</label>
-					<input type="email" name="email" class="form-control" ng-model="email">
-					<p class="help-block" ng-show="addForm.email.$invalid">Enter a valid email.</p>
+			<form class="form-signin col-sm-5" name="addForm">
+				<div class="form-group" ng-class="{ 'has-error' : addForm.addemail.$invalid }">
+					<label>Add Amin Role (insert email)</label>
+					<input type="email" name="addemail" class="form-control" ng-model="addemail">
+					<p class="help-block" ng-show="addForm.addemail.$invalid">Enter a valid email.</p>
 				</div> 
-				<button type="button" ng-click="addAdmin();" ng-disabled="!email" class="btn btn-lg btn-success btn-block">Add</button>
+				<button type="button" ng-click="addAdmin();" ng-disabled="!addemail" class="btn btn-lg btn-success btn-block">Add</button>
+			</form>
+			
+			<form class="form-signin col-sm-5" name="delForm">
+				<div class="form-group" ng-class="{ 'has-error' : delForm.delemail.$invalid }">
+					<label>Remove Admin Role (insert email)</label>
+					<input type="email" name="delemail" class="form-control" ng-model="delemail">
+					<p class="help-block" ng-show="delForm.delemail.$invalid">Enter a valid email.</p>
+				</div> 
+				<button type="button" ng-click="delAdmin();" ng-disabled="!delemail" class="btn btn-lg btn-danger btn-block">Delete</button>
 			</form>
 		</div>
 		

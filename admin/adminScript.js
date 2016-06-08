@@ -34,15 +34,47 @@ adminApp.controller('adminCtrl', ['$scope','UserService', '$location', '$firebas
 					{
 						for(i = 0; i < ref.length; i++)
 						{
-							if($scope.email === ref[i].$value)
+							if($scope.addemail === ref[i].$value)
 							{
 								alert("This user already has admin permission!");
+								$route.reload();
 								return;
 							}
 						}
-						fb.push($scope.email);
+						fb.push($scope.addemail);
 						alert("Added successfully!");
-						$scope.email = "";
+						$scope.addemail = "";
+						$route.reload();
+					}
+				}
+				
+				$scope.delAdmin = function() {
+					if(!$scope.delForm.$invalid)
+					{
+						for(i = 0; i < ref.length; i++)
+						{
+							if($scope.delemail === ref[i].$value && $scope.delemail !== newVal)
+							{
+								var temp = new Firebase("https://frontend-tuts.firebaseio.com/adm" + ref[i].$id);
+								var onComplete = function(error) {
+									if(error){
+										console.log(error);
+									}
+									else{
+										console.log("Delete Successfully!");
+										alert("Delete successfully!");
+										$scope.delemail = "";
+										$route.reload();
+									}
+								};
+								temp.remove(onComplete);
+								$scope.delemail = "";
+								$route.reload();
+								return;
+							}
+						}
+						alert($scope.delemail + " dose not exist");
+						$scope.delemail = "";
 					}
 				}
 			}
