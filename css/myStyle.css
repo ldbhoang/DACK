@@ -201,4 +201,5 @@ TUT CONTENT
 
 .tutContent p {
 	text-align: justify;
+	word-wrap: break-word;
 }

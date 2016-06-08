@@ -5,10 +5,12 @@ var myApp = angular.module('mainApp', [
 	'mainApp.home',
 	'mainApp.login',
 	'mainApp.html',
+	'mainApp.css',
+	'mainApp.js',
 	'mainApp.addPost',
-	'mainApp.discuss',
 	'mainApp.admin',
-	'mainApp.detailTopic'
+	'mainApp.editPost',
+	'mainApp.discuss'
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider){

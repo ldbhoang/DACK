@@ -1,17 +1,17 @@
 'use strict'
 
-var htmlApp = angular.module('mainApp.html', ['ngRoute','firebase','ngCookies']);
+var jsApp = angular.module('mainApp.js', ['ngRoute','firebase','ngCookies']);
 
 //Route
-htmlApp.config(['$routeProvider', function($routeProvider){
-	$routeProvider.when('/htmlTuts/:id', {
-        templateUrl: 'htmlTuts/htmlTuts.html',
-        controller: 'htmlCtrl'
+jsApp.config(['$routeProvider', function($routeProvider){
+	$routeProvider.when('/jsTuts/:id', {
+        templateUrl: 'jsTuts/jsTuts.html',
+        controller: 'jsCtrl'
     })
 }]);
 
-htmlApp.controller('htmlCtrl', ['$scope', '$firebase', '$firebaseArray', '$location', '$route', '$sce', function($scope, $firebase, $firebaseArray, $location, $route, $sce){
-	var fb = new Firebase("https://frontend-tuts.firebaseio.com/htmlTuts");
+jsApp.controller('jsCtrl', ['$scope', '$firebase', '$firebaseArray', '$location', '$route', '$sce', function($scope, $firebase, $firebaseArray, $location, $route, $sce){
+	var fb = new Firebase("https://frontend-tuts.firebaseio.com/jsTuts");
 	$scope.tuts = $firebaseArray(fb);
 	var id = $route.current.params.id;
 	$scope.tuts.$loaded().then(function(){
@@ -53,7 +53,7 @@ htmlApp.controller('htmlCtrl', ['$scope', '$firebase', '$firebaseArray', '$locat
 		//id does not exist
 		if($scope.curTut == null)
 		{
-			$location.path('/htmlTuts/default');
+			$location.path('/jsTuts/default');
 		}
 		
 	});	
