@@ -43,32 +43,25 @@
 	<br/>
 	<br/>
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-5 itemBlock">
-				<img class="img-responsive banner" src="./images/discuss-default.png"/>
-				<p class="title"> Discusstion title </p>
-			</div>
-			<div class="col-xs-5 itemBlock">
-				<img class="img-responsive banner" src="./images/discuss-default.png"/>
-				<p class="title"> Discusstion title </p>
-			</div>
-			<div class="col-xs-5 itemBlock">
-				<img class="img-responsive banner" src="./images/discuss-default.png"/>
-				<p class="title"> Discusstion title </p>
-			</div>
-			<div class="col-xs-5 itemBlock">
-				<img class="img-responsive banner" src="./images/discuss-default.png"/>
-				<p class="title"> Discusstion title </p>
-			</div>
-			<div class="col-xs-5 itemBlock">
-				<img class="img-responsive banner" src="./images/discuss-default.png"/>
-				<p class="title"> Discusstion title </p>
-			</div>
-			<div class="col-xs-5 itemBlock">
-				<img class="img-responsive banner" src="./images/discuss-default.png"/>
-				<p class="title"> Discusstion title </p>
+		<div ng-repeat="item in Topic | filter:query as filtered">
+			<div class="col-md-4">
+				<div class="name">
+					{{item.name}}
+					<span ng-show = "IsVisible"><br/> <input ng-model="item.name"/> </span>
+				</div>
+				
 			</div>
 		</div>
+		<div class="list-group" ng-repeat="topic in Topics | orderBy: topic.datePublish: true | limitTo:6:0">
+            <a href="#/detailTopic/{{topic.$id}}" class="list-group-item list-group-item-success discussContent">
+                <h4 class="list-group-item-heading">{{topic.topic}}</h4>
+                <span class="pull-right">
+                    <button class="btn btn-xs btn-info " >{{topic.type}}</button>
+                     <p class="list-group-item-text">{{topic.datePublish}}</p>
+                </span>
+            </a>
+			<br/>
+        </div>
 	</div>
   </body>
   
