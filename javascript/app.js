@@ -9,7 +9,7 @@ var myApp = angular.module('mainApp', [
 	'mainApp.js',
 	'mainApp.addPost',
 	'mainApp.admin',
-	'mainApp.editPost'
+	'mainApp.editPost',
 	'mainApp.discuss'
 ]);
 
