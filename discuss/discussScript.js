@@ -13,7 +13,7 @@ discussApp.config(['$routeProvider', function($routeProvider){
     })
 }]);
 
-discussApp.controller('discussCtrl', ['$scope','$location','UserService' ,'$firebase', '$firebaseArray',function($scope,$location,UserService,$firebase, $firebaseArray){
+discussApp.controller('discussCtrl', ['$scope','$location','UserService' ,'$firebase', '$firebaseArray', 'DiscussService',function($scope,$location,UserService,$firebase, $firebaseArray, DiscussService){
     $scope.service = UserService;
     $scope.$watch('service.getUser()', function(newVal) {
         if(!newVal || newVal=='' || newVal == 'failed') {
@@ -49,6 +49,25 @@ discussApp.controller('discussCtrl', ['$scope','$location','UserService' ,'$fire
                 }
             });
         };
+
+        $scope.openDetail = function(id){
+            console.log(id);
+            DiscussService.setIdTopic(id);
+            $location.path('/detailTopic');
+        }
     });
 
 }]);
+
+discussApp.service('DiscussService', function() {
+    var idTopic = '';
+    return{
+        getIdTopic: function(){
+            return idTopic;
+        },
+
+        setIdTopic: function(value) {
+            idTopic = value;
+        }
+    };
+});

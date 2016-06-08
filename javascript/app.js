@@ -7,7 +7,8 @@ var myApp = angular.module('mainApp', [
 	'mainApp.html',
 	'mainApp.addPost',
 	'mainApp.discuss',
-	'mainApp.admin'
+	'mainApp.admin',
+	'mainApp.detailTopic'
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider){

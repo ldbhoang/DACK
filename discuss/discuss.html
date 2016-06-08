@@ -18,13 +18,15 @@
         </div>
 
         <div class="list-group" ng-repeat="topic in Topics | orderBy: topic.datePublish: true">
-            <a href="#" onclick="return false;" class="list-group-item active">
+            <button ng-click="openDetail(topic.$id)" class="list-group-item active">
                 <h4 class="list-group-item-heading">{{topic.topic}}</h4>
-                <button class="btn btn-xs btn-info pull-right"  >{{topic.type}}</button>
-                <p class="list-group-item-text">{{topic.content}}</p>
-                <p class="list-group-item-text pull-right">{{topic.datePublish}}</p>
+                <span class="pull-right">
+                    <button class="btn btn-xs btn-info " >{{topic.type}}</button>
+                     <p class="list-group-item-text">{{topic.datePublish}}</p>
+                </span>
 
-            </a>
+
+            </button>
         </div>
 
         <div class="modal fade" id="newTopicModal" tabindex="-1" role="dialog" aria-labelledby="newTopicModalLabel" >
