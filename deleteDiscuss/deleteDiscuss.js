@@ -15,8 +15,10 @@ deleteDiscussApp.config(['$routeProvider', function($routeProvider){
 
 deleteDiscussApp.controller('deleteDiscussCtrl', ['$scope','UserService', '$location', '$firebase', '$firebaseObject', '$firebaseArray', function($scope, UserService, $location, $firebase, $firebaseObject, $firebaseArray){
     $scope.service = UserService;
+    $scope.showlist = false;
     var fb = new Firebase("https://frontend-tuts.firebaseio.com/adm");
     var fbdiscuss =  new Firebase("https://frontend-tuts.firebaseio.com/discuss");
+    var fbanswer = "";
     var ref = $firebaseArray(fb);
 
     $scope.$watch('service.getUser()', function(newVal) {
@@ -84,6 +86,42 @@ deleteDiscussApp.controller('deleteDiscussCtrl', ['$scope','UserService', '$loca
 
                     postDelete.remove(onComplete);
                 }
+
+                $scope.showReply = function(id){
+                    console.log(id);
+                    fbanswer = fbdiscuss.child(id).child('answers');
+                    $scope.answers = $firebaseArray(fbanswer);
+                    console.log($scope.answers);
+                        $scope.showlist = true;
+                        $('#deletereplyModal').modal('show');
+                }
+
+                $scope.confirmDeleteReply = function(id) {
+                    console.log(id);
+                    var firebaseObj = fbanswer.child(id);
+                    $scope.replyToDelete = $firebaseObject(firebaseObj);
+                    $('#confirmdeleteReplyModal').modal('show');
+                }
+
+                $scope.deleteReply = function() {
+
+                    console.log($scope.replyToDelete.$id);
+                    var replyDelete = fbanswer.child($scope.replyToDelete.$id);
+
+                    var onComplete = function(error) {
+                        if(error){
+                            console.log(error);
+                        }
+                        else{
+                            console.log("Delete Successfully!");
+                            $('#confirmdeleteReplyModal').modal('hide');
+                        }
+                    };
+
+                    replyDelete.remove(onComplete);
+                }
+
+
             }
             else
             {
