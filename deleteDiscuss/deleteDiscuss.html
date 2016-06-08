@@ -27,7 +27,7 @@
         </div>
     </div>
     <br/>
-    <div class="list-group" ng-repeat="topic in topics">
+    <div class="list-group" ng-repeat="topic in topics | filter: type">
         <a href="#" onclick="return false;" class="list-group-item list-group-item-success">
             <h4 class="list-group-item-heading">{{topic.topic}}</h4>
 				<span class="pull-right">
@@ -71,12 +71,12 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header" style="text-align:center;">
-                    <h4 class="modal-title" style="color:red;" id="deleteModalLabel">You are going to Delete this post forever !!</h4>
+                    <h4 class="modal-title" style="color:red;" id="deleteModalLabel">You are going to Delete this topic forever !!</h4>
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" ng-click="deletePost()">Delete</button>
+                    <button type="button" class="btn btn-primary" ng-click="deleteTopic()">Delete</button>
                 </div>
             </div>
         </div>

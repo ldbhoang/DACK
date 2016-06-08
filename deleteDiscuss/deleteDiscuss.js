@@ -16,7 +16,7 @@ deleteDiscussApp.config(['$routeProvider', function($routeProvider){
 deleteDiscussApp.controller('deleteDiscussCtrl', ['$scope','UserService', '$location', '$firebase', '$firebaseObject', '$firebaseArray', function($scope, UserService, $location, $firebase, $firebaseObject, $firebaseArray){
     $scope.service = UserService;
     var fb = new Firebase("https://frontend-tuts.firebaseio.com/adm");
-    var fb1;
+    var fbdiscuss =  new Firebase("https://frontend-tuts.firebaseio.com/discuss");
     var ref = $firebaseArray(fb);
 
     $scope.$watch('service.getUser()', function(newVal) {
@@ -35,76 +35,42 @@ deleteDiscussApp.controller('deleteDiscussCtrl', ['$scope','UserService', '$loca
             if($scope.flag)
             {
                 $scope.applyCategory = function() {
+                    $scope.topics = $firebaseArray(fbdiscuss);
+                    console.log($scope.topics)
                     if($scope.topic.type == null)
                     {
                         alert("Please select one category for post!!!");
                         return;
                     }
 
-                    if($scope.post.type === "HTML Topic")
+                    if($scope.topic.type === "HTML Topic")
                     {
-
+                        $scope.type = "HTML";
                     }
-                    else if($scope.post.type === "Javascript Topic")
+                    else if($scope.topic.type === "Javascript Topic")
                     {
-
+                        $scope.type = "JAVASCRIPT";
                     }
-                    else if($scope.post.type === "CSS Topic")
+                    else if($scope.topic.type === "CSS Topic")
                     {
-
+                        $scope.type = "CSS";
                     }
-
-                    var ref1 = $firebaseArray(fb1)
-                    $scope.posts = ref1;
-                }
-
-
-
-                $scope.deleteDiscuss = function(id) {
-                    console.log(id);
-                    var firebaseObj = fb1.child(id);
-
-                    $scope.postToUpdate = $firebaseObject(firebaseObj);
-
-                    $('#editModal').modal();
-                }
-
-                $scope.update = function() {
-                    console.log($scope.postToUpdate.$id);
-                    var postUpdate = fb1.child($scope.postToUpdate.$id);
-
-                    var onComplete = function(error) {
-                        if(error){
-                            console.log(error);
-                        }
-                        else{
-                            console.log("Update Successfully!");
-                            $('#editModal').modal('hide')
-                        }
-                    };
-
-                    postUpdate.update({
-                        title: $scope.postToUpdate.title,
-                        post: $scope.postToUpdate.post
-
-                    }, onComplete);
 
                 }
-
 
                 $scope.confirmDelete = function(id) {
                     console.log(id);
-                    var firebaseObj = fb1.child(id);
+                    var firebaseObj = fbdiscuss.child(id);
 
-                    $scope.postToDelete = $firebaseObject(firebaseObj);
+                    $scope.topicToDelete = $firebaseObject(firebaseObj);
 
                     $('#deleteModal').modal();
                 }
 
-                $scope.deletePost = function() {
+                $scope.deleteTopic = function() {
 
-                    console.log($scope.postToDelete.$id);
-                    var postDelete = fb1.child($scope.postToDelete.$id);
+                    console.log($scope.topicToDelete.$id);
+                    var postDelete = fbdiscuss.child($scope.topicToDelete.$id);
 
                     var onComplete = function(error) {
                         if(error){
