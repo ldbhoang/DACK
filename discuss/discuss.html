@@ -18,7 +18,7 @@
         </div>
 
         <div class="list-group" ng-repeat="topic in Topics | orderBy: topic.datePublish: true">
-            <button ng-click="openDetail(topic.$id)" class="list-group-item active">
+            <a href="#/detailTopic/{{topic.$id}}" class="list-group-item active">
                 <h4 class="list-group-item-heading">{{topic.topic}}</h4>
                 <span class="pull-right">
                     <button class="btn btn-xs btn-info " >{{topic.type}}</button>
@@ -26,7 +26,7 @@
                 </span>
 
 
-            </button>
+            </a>
         </div>
 
         <div class="modal fade" id="newTopicModal" tabindex="-1" role="dialog" aria-labelledby="newTopicModalLabel" >

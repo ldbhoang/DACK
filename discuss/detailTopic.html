@@ -15,7 +15,7 @@
         <div class="list-group" >
             <button class="list-group-item active">
                 <h4 class="list-group-item-heading">{{detailTopic.emailOwner}}</h4>
-                <p class="list-group-item">{{detailTopic.content}}</p>
+                <p class="list-group-item-text">{{detailTopic.content}}</p>
                     <span class="pull-right">
                         <button class="btn btn-xs btn-info " >{{detailTopic.type}}</button>
                          <p class="list-group-item-text">{{detailTopic.datePublish}}</p>
@@ -25,9 +25,32 @@
 
         <div class="form-group">
             <div >
-                <button class="btn btn-primary" data-toggle="modal" data-target="#newTopicModal">Reply</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#replyModal">Reply</button>
             </div>
         </div>
+
+    <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="replyModalLabel">{{detailTopic.topic}}</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Content</label>
+                            <textarea class="form-control" id="message-text" ng-model="reply.Content" ></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-disabled="!reply.Content" ng-click="Reply()">Reply</button>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
 </body>

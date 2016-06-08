@@ -10,7 +10,8 @@ var myApp = angular.module('mainApp', [
 	'mainApp.addPost',
 	'mainApp.admin',
 	'mainApp.editPost',
-	'mainApp.discuss'
+	'mainApp.discuss',
+	'mainApp.detailTopic'
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider){
