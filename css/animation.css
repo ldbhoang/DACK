@@ -2,13 +2,10 @@
 /* ANIMATIONS
 ============================================================================= */
 
-.page.ng-leave  { z-index:9999; }
-.page.ng-enter  { z-index:8888; }
-
 /* page specific animations ------------------------ */
 
-/* home -------------------------- */
-.page-home.ng-leave         {
+/* animation1 -------------------------- */
+.page-animation1.ng-leave         {
     -webkit-transform-origin: 0% 0%;
     -webkit-animation: rotateFall 1s both ease-in;
     -moz-transform-origin: 0% 0%;
@@ -16,26 +13,26 @@
     transform-origin: 0% 0%;
     animation: rotateFall 1s both ease-in;
 }
-.page-home.ng-enter         {
+.page-animation1.ng-enter         {
     -webkit-animation:scaleUp 0.5s both ease-in;
     -moz-animation:scaleUp 0.5s both ease-in;
     animation:scaleUp 0.5s both ease-in;
 }
 
 /* about ------------------------ */
-.page-about.ng-leave        {
+.page-animation3.ng-leave        {
     -webkit-animation:slideOutLeft 0.5s both ease-in;
     -moz-animation:slideOutLeft 0.5s both ease-in;
     animation:slideOutLeft 0.5s both ease-in;
 }
-.page-about.ng-enter        {
+.page-animation3.ng-enter        {
     -webkit-animation:slideInRight 0.5s both ease-in;
     -moz-animation:slideInRight 0.5s both ease-in;
     animation:slideInRight 0.5s both ease-in;
 }
 
 /* contact ---------------------- */
-.page-contact.ng-leave      {
+.page-animation2.ng-leave      {
     -webkit-transform-origin: 50% 50%;
     -webkit-animation: rotateOutNewspaper .5s both ease-in;
     -moz-transform-origin: 50% 50%;
@@ -43,7 +40,7 @@
     transform-origin: 50% 50%;
     animation: rotateOutNewspaper .5s both ease-in;
 }
-.page-contact.ng-enter      {
+.page-animation2.ng-enter      {
     -webkit-animation:slideInUp 0.5s both ease-in;
     -moz-animation:slideInUp 0.5s both ease-in;
     animation:slideInUp 0.5s both ease-in;

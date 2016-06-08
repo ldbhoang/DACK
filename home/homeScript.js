@@ -11,7 +11,7 @@ homeApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 homeApp.controller('homeCtrl', ['$scope','$location','$firebase', '$firebaseArray',function($scope,$location,$firebase, $firebaseArray){
-    $scope.pageClass = 'page-home';
+    $scope.pageClass = 'page-animation1';
 	var firebaseObj = new Firebase("https://frontend-tuts.firebaseio.com/discuss/");
 
 	$scope.Topics = $firebaseArray(firebaseObj);

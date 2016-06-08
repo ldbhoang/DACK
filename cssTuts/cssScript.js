@@ -11,7 +11,7 @@ cssApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 cssApp.controller('cssCtrl', ['$scope', '$firebase', '$firebaseArray', '$location', '$route', '$sce', function($scope, $firebase, $firebaseArray, $location, $route, $sce){
-	$scope.pageClass = 'page-contact';
+	$scope.pageClass = 'page-animation2';
 	var fb = new Firebase("https://frontend-tuts.firebaseio.com/cssTuts");
 	$scope.tuts = $firebaseArray(fb);
 	var id = $route.current.params.id;

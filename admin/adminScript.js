@@ -11,7 +11,7 @@ adminApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 adminApp.controller('adminCtrl', ['$scope','UserService', '$location', '$firebase', '$route', '$firebaseArray', function($scope, UserService, $location, $firebase, $route, $firebaseArray){
-	$scope.pageClass = 'page-home';
+	$scope.pageClass = 'page-animation1';
 	$scope.service = UserService;
 	var fb = new Firebase("https://frontend-tuts.firebaseio.com/adm");
 	var ref = $firebaseArray(fb);

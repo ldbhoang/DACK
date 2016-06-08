@@ -11,7 +11,7 @@ addPostApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 addPostApp.controller('addPostCtrl', ['$scope','UserService', '$location', '$firebase', '$route', '$firebaseArray', function($scope, UserService, $location, $firebase, $route, $firebaseArray){
-	$scope.pageClass = 'page-about';
+	$scope.pageClass = 'page-animation3';
 	$scope.service = UserService;
 	var fb = new Firebase("https://frontend-tuts.firebaseio.com/adm");
 	var ref = $firebaseArray(fb);
