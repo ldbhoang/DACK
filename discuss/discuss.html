@@ -13,12 +13,21 @@
     <div class="container">
         <h2>Front End Developer Discuss</h2>
         <div class="form-group">
+            <div class="col-xs-2">
+                <select class="form-control" ng-model="topic.type" id="sel1" style="margin-top: 1vh;">
+                    <option selected>ALL</option>
+                    <option >HTML Topic</option>
+                    <option>CSS Topic</option>
+                    <option>Javascript Topic</option>
+                </select>
+            </div>
             <div >
-                <button class="btn btn-success" data-toggle="modal" data-target="#newTopicModal">New Topic</button>
+                <button  ng-click="applyCategory()" class="btn btn-success">Select</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#newTopicModal">New Topic</button>
             </div>
         </div>
 
-        <div class="list-group" ng-repeat="topic in Topics | orderBy: topic.datePublish: true">
+        <div class="list-group" ng-repeat="topic in Topics | orderBy: [topic.datePublish]: true | filter: type">
             <a href="#/detailTopic/{{topic.$id}}" class="list-group-item list-group-item-success discussContent">
                 <h4 class="list-group-item-heading">{{topic.topic}}</h4>
                 <span class="pull-right">
