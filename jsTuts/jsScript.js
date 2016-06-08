@@ -11,7 +11,7 @@ jsApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 jsApp.controller('jsCtrl', ['$scope', '$firebase', '$firebaseArray', '$location', '$route', '$sce', function($scope, $firebase, $firebaseArray, $location, $route, $sce){
-	$scope.pageClass = 'page-home';
+	$scope.pageClass = 'page-contact';
 	var fb = new Firebase("https://frontend-tuts.firebaseio.com/jsTuts");
 	$scope.tuts = $firebaseArray(fb);
 	var id = $route.current.params.id;

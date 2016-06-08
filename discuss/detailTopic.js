@@ -14,7 +14,7 @@ detailTopicApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 detailTopicApp.controller('detailTopicCtrl', ['$scope', '$firebase', '$firebaseArray', '$location', '$route', 'UserService', function($scope, $firebase, $firebaseArray, $location, $route, UserService) {
-	$scope.pageClass = 'page-home';
+	$scope.pageClass = 'page-about';
 	$scope.service = UserService;
 	var loggedIn = false;
     $scope.$watch('service.getUser()', function(newVal) {
