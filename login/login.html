@@ -25,8 +25,8 @@
 					<div class="form-group" ng-class="{ 'has-error' : regForm.password.$invalid }">
 						<label>Password</label>
 					   
-						<input type="password" name="regpassword" class="form-control" ng-model="user.regpassword" ng-minlength="8">
-						<p class="help-block" ng-show="regForm.regpassword.$error.minlength">Min password length is 8 characters.</p>
+						<input type="password" name="regpassword" class="form-control" ng-model="user.regpassword" ng-minlength="6">
+						<p class="help-block" ng-show="regForm.regpassword.$error.minlength">Min password length is 6 characters.</p>
 						<p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>
 					</div> 
 					<br/>
@@ -44,8 +44,9 @@
 					</div> 
 				<div class="form-group" ng-class="{ 'has-error' : signinForm.logpassword.$invalid }">
 					<label>Password</label>
-						<input type="password" name="logpassword" class="form-control" ng-model="user.logpassword" ng-minlength="3">
-						<p class="help-block" ng-show="signinForm.logpassword.$error.minlength">Min password length is 8 characters.</p>
+						<input type="password" name="logpassword" class="form-control" ng-model="user.logpassword" ng-minlength="6">
+						<p class="help-block" ng-show="signinForm.logpassword.$error.minlength">Min password length is 6 characters.</p>
+						<p style="color:red;" ng-show="logError">{{logErrorMessage}}</p>
 					</div>
 					<br/>
 					<button ng-disabled="!user.logemail || !user.logpassword" type="button" ng-click="SignIn($event)" class="btn btn-lg btn-success btn-block">SignIn</button>
