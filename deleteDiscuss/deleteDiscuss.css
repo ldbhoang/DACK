@@ -1,0 +1,10 @@
+.deleteDiscusslabel {
+    float: left;
+    padding: 1% 1% 1% 1%;
+    margin-left: 10px;
+    text-align: center;
+    background: #4CAF50;
+    color: #fff;
+    text-decoration: none !important;
+    border-radius: 5px;
+}

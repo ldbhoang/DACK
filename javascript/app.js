@@ -11,7 +11,8 @@ var myApp = angular.module('mainApp', [
 	'mainApp.admin',
 	'mainApp.editPost',
 	'mainApp.discuss',
-	'mainApp.detailTopic'
+	'mainApp.detailTopic',
+	'mainApp.deleteDiscuss'
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider){
