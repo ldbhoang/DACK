@@ -26,6 +26,10 @@ detailTopicApp.controller('detailTopicCtrl', ['$scope', '$firebase', '$firebaseA
                     break;
                 }
             }
+		if($scope.detailTopic == null)
+		{
+			$location.path('/discuss');
+		}
     });
 
     $scope.Reply = function(){

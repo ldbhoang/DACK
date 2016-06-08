@@ -1,0 +1,11 @@
+/*-------------------------------------------------
+DETAIL TOPIC INFO 
+--------------------------------------------------*/
+.detailInfo {
+	display: inline-block;
+}
+
+.discussContent p {
+	text-align: justify;
+	word-wrap: break-word;
+}
