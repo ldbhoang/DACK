@@ -11,6 +11,7 @@ editPostApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 editPostApp.controller('editPostCtrl', ['$scope','UserService', '$location', '$firebase', '$firebaseObject', '$firebaseArray', function($scope, UserService, $location, $firebase, $firebaseObject, $firebaseArray){
+	$scope.pageClass = 'page-home';
 	$scope.service = UserService;
 	var fb = new Firebase("https://frontend-tuts.firebaseio.com/adm");
 	var fb1;

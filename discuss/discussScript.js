@@ -14,6 +14,7 @@ discussApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 discussApp.controller('discussCtrl', ['$scope','$location','UserService' ,'$firebase', '$firebaseArray', '$route', function($scope,$location,UserService,$firebase, $firebaseArray, $route){
+	$scope.pageClass = 'page-home';
     $scope.service = UserService;
 	var loggedIn = false;
     $scope.$watch('service.getUser()', function(newVal) {

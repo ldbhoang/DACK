@@ -10,7 +10,8 @@ loginApp.config(['$routeProvider', function($routeProvider){
     })
 }]);
 
-loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebaseAuth',function($scope,$location,UserService,$firebaseAuth) {	
+loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebaseAuth',function($scope,$location,UserService,$firebaseAuth) {
+	$scope.pageClass = 'page-home';
 	var firebaseObj = new Firebase("https://frontend-tuts.firebaseio.com/");
 	var authData = firebaseObj.getAuth();
 	var authObj = $firebaseAuth(firebaseObj);

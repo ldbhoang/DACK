@@ -14,6 +14,7 @@ deleteDiscussApp.config(['$routeProvider', function($routeProvider){
 }]);
 
 deleteDiscussApp.controller('deleteDiscussCtrl', ['$scope','UserService', '$location', '$firebase', '$firebaseObject', '$firebaseArray', function($scope, UserService, $location, $firebase, $firebaseObject, $firebaseArray){
+    $scope.pageClass = 'page-home';
     $scope.service = UserService;
     $scope.showlist = false;
     var fb = new Firebase("https://frontend-tuts.firebaseio.com/adm");

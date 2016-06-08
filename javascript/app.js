@@ -2,6 +2,7 @@
 
 var myApp = angular.module('mainApp', [
 	'ngRoute',
+	'ngAnimate',
 	'mainApp.home',
 	'mainApp.login',
 	'mainApp.html',
