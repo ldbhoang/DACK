@@ -23,9 +23,11 @@ loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebase
 	}
 	
 	
-	$scope.loguser = {};
+	var login = {};
+	$scope.login=login;
 	$scope.SignIn = function(e) {
 		e.preventDefault();
+		login.loading = true;
 		var username = $scope.user.logemail;
 		var password = $scope.user.logpassword;
 		authObj.$authWithPassword({
@@ -34,18 +36,23 @@ loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebase
 			})
 			.then(function(user) {
 				//Success callback
+				login.loading = false;
 				console.log('Authentication successful');
 				UserService.setUser(username);
 				$location.path('/home');				
 			}, function(error) {
 				//Failure callback
+				login.loading = false;
 				console.log('Authentication failure');
 				$scope.logError = true;
 				$scope.logErrorMessage = error.message;
 			});
 	};
-	
+
+	var register = {};
+	$scope.register = register;
 	$scope.signUp = function() {
+		register.loading = true;
 		if (!$scope.regForm.$invalid) {
 			var email = $scope.user.regemail;
 			var password = $scope.user.regpassword;
@@ -60,17 +67,20 @@ loginApp.controller('loginCtrl', ['$scope','$location','UserService' ,'$firebase
 						})
 						.then(function(user) {
 							//Success callback
+							register.loading = false;
 							console.log('Authentication successful');
 							UserService.setUser(email);
 							$location.path('/home');
 						}, function(error) {
 							//Failure callback
+							register.loading = false;
 							console.log('Authentication failure');
 							$scope.regError = true;
 							$scope.regErrorMessage = error.message;
 						});
 					}, function(error) {
 						// do things if failure
+						register.loading = false;
 						console.log(error);
 						$scope.regError = true;
 						$scope.regErrorMessage = error.message;
@@ -93,3 +103,21 @@ loginApp.service('UserService', [ '$cookies', function($cookies) {
         }
     };
 }]);
+
+loginApp.directive('laddaLoading', [
+	function(){
+		return {
+			link: function(scope, element, attrs){
+				var Ladda = window.Ladda;
+				var ladda = Ladda.create(element[0]);
+				scope.$watch(attrs.laddaLoading, function(newVal, oldVal){
+					if(newVal){
+						ladda.start();
+					} else{
+						ladda.stop();
+					}
+				});
+			}
+		};
+	}
+]);

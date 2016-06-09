@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5f7cd70-f299-4163-9cdc-49d79cbd9df3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addPost/addPostScript.js" afterPath="$PROJECT_DIR$/addPost/addPostScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/adminScript.js" afterPath="$PROJECT_DIR$/admin/adminScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/animation.css" afterPath="$PROJECT_DIR$/css/animation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cssTuts/cssScript.js" afterPath="$PROJECT_DIR$/cssTuts/cssScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deleteDiscuss/deleteDiscuss.js" afterPath="$PROJECT_DIR$/deleteDiscuss/deleteDiscuss.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/discuss/detailTopic.js" afterPath="$PROJECT_DIR$/discuss/detailTopic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/discuss/discussScript.js" afterPath="$PROJECT_DIR$/discuss/discussScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editPost/editPostScript.js" afterPath="$PROJECT_DIR$/editPost/editPostScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/homeScript.js" afterPath="$PROJECT_DIR$/home/homeScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlTuts/htmlScript.js" afterPath="$PROJECT_DIR$/htmlTuts/htmlScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsTuts/jsScript.js" afterPath="$PROJECT_DIR$/jsTuts/jsScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/ladda-themeless.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascript/ladda.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/ladda.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascript/ladda.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascript/spin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/login.html" afterPath="$PROJECT_DIR$/login/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/loginScript.js" afterPath="$PROJECT_DIR$/login/loginScript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DACK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,26 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="deleteDiscuss.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deleteDiscuss/deleteDiscuss.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="2363">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cssScript.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cssTuts/cssScript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1224">
-              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jsScript.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsTuts/jsScript.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,11 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1491228" vertical-offset="51" max-vertical-offset="1496">
-              <caret line="8" column="50" selection-start-line="7" selection-start-column="56" selection-end-line="8" selection-end-column="50" />
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="153" max-vertical-offset="1530">
+              <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spin.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/spin.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,11 +94,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginScript.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginScript.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login/loginScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1700">
-              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.82342345" vertical-offset="937" max-vertical-offset="2176">
+              <caret line="82" column="49" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.8148148" vertical-offset="423" max-vertical-offset="1156">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ladda-themeless.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/ladda-themeless.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,18 +134,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detailTopic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/discuss/detailTopic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1445">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#45#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -147,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/login/login.html" />
         <option value="$PROJECT_DIR$/discuss/detailTopic.html" />
         <option value="$PROJECT_DIR$/deleteDiscuss/deleteDiscuss.css" />
         <option value="$PROJECT_DIR$/editPost/editPost.html" />
@@ -156,7 +150,6 @@
         <option value="$PROJECT_DIR$/deleteDiscuss/deleteDiscuss.html" />
         <option value="$PROJECT_DIR$/discuss/discuss.html" />
         <option value="$PROJECT_DIR$/javascript/app.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/animation.css" />
         <option value="$PROJECT_DIR$/addPost/addPostScript.js" />
         <option value="$PROJECT_DIR$/admin/adminScript.js" />
@@ -168,6 +161,8 @@
         <option value="$PROJECT_DIR$/home/homeScript.js" />
         <option value="$PROJECT_DIR$/htmlTuts/htmlScript.js" />
         <option value="$PROJECT_DIR$/jsTuts/jsScript.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/login/login.html" />
         <option value="$PROJECT_DIR$/login/loginScript.js" />
       </list>
     </option>
@@ -251,20 +246,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DACK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DACK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cssTuts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -279,6 +260,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Study\HK6\PTUDWeb\DACK\css" />
       <recent name="E:\Study\HK6\PTUDWeb\DACK\javascript" />
       <recent name="E:\Study\HK6\PTUDWeb\DACK" />
     </key>
@@ -349,6 +331,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -356,11 +340,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -384,21 +366,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/deleteDiscuss/deleteDiscuss.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="2346">
-          <caret line="58" column="21" selection-start-line="47" selection-start-column="20" selection-end-line="58" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deleteDiscuss/deleteDiscuss.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1972">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addPost/addPost.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1207">
@@ -640,14 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="1088">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login/loginStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
@@ -754,18 +713,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/loginScript.js">
+    <entry file="file://$PROJECT_DIR$/javascript/spin.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1700">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ladda-themeless.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1491228" vertical-offset="51" max-vertical-offset="1496">
-          <caret line="8" column="50" selection-start-line="7" selection-start-column="56" selection-end-line="8" selection-end-column="50" />
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="153" max-vertical-offset="1530">
+          <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8148148" vertical-offset="423" max-vertical-offset="1156">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/loginScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82342345" vertical-offset="937" max-vertical-offset="2176">
+          <caret line="82" column="49" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
           <folding />
         </state>
       </provider>
