@@ -29,6 +29,7 @@ discussApp.controller('discussCtrl', ['$scope','$location','UserService' ,'$fire
 
         $scope.Topics = $firebaseArray(firebaseObj);
 		$scope.type = "";
+		$scope.typeselect = "ALL";
         $scope.createTopic = function(){
 			console.log(loggedIn);
 			if(loggedIn)
@@ -74,23 +75,23 @@ discussApp.controller('discussCtrl', ['$scope','$location','UserService' ,'$fire
 
 		$scope.applyCategory = function()
 		{
-			if($scope.topic.type === "ALL")
+			if($scope.typeselect === "ALL")
 			{
 				$scope.type = "";
 			}
-			else if($scope.topic.type === "HTML Topic")
+			else if($scope.typeselect === "HTML Topic")
 			{
 				$scope.type = "HTML";
 			}
-			else if($scope.topic.type === "Javascript Topic")
+			else if($scope.typeselect === "Javascript Topic")
 			{
 				$scope.type = "JAVASCRIPT";
 			}
-			else if($scope.topic.type === "CSS Topic")
+			else if($scope.typeselect === "CSS Topic")
 			{
 				$scope.type = "CSS";
 			}
-			console.log($scope.type);
+			
 
 		}
     });

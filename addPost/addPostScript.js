@@ -27,10 +27,12 @@ addPostApp.controller('addPostCtrl', ['$scope','UserService', '$location', '$fir
 					break;
 				}
 			}
-			
+			var publish = {};
+			$scope.publish = publish;
 			if($scope.flag)
 			{
 				$scope.AddPost = function(){
+					publish.loading = true;
 					var title = $scope.article.title;
 					var post = $scope.article.post;
 					var type = $scope.article.type;
@@ -57,9 +59,11 @@ addPostApp.controller('addPostCtrl', ['$scope','UserService', '$location', '$fir
 					
 					var onComplete = function(error) {
 						if(error){
+							publish.loading = false;
 							console.log(error);
 						}
 						else{
+							publish.loading = false;
 							console.log("Push data success");
 							$route.reload();
 						}
